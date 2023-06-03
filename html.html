@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CO2 Emission Reduction Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <section class="input-forms">
+            <h2>Enter Your Daily CO2 Emissions</h2>
+            <form>
+                <label for="travel">Travel</label>
+                <input type="number" id="travel" name="travel" required>
+
+                <label for="holiday-travel">Holiday Travel</label>
+                <input type="number" id="holiday-travel" name="holiday-travel" required>
+
+                <label for="household-consumption">Household consumption</label>
+                <input type="number" id="household-consumption" name="household-consumption" required>
+
+                <label for="waste-disposal">Waste disposal</label>
+                <input type="number" id="waste-disposal" name="waste-disposal" required>
+
+                <label for="other">Other</label>
+                <input type="number" id="other" name="other" required>
+
+                <button type="submit">Submit</button>
+                <button id="logoutButton" type="submit">Logout</button>
+            </form>
+        </section>
+
+        <section class="leaderboard">
+            <h2>Leaderboard</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Player</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Player scores will be added dynamically with JavaScript -->
+                </tbody>
+            </table>
+        </section>
+
+
+
+        <section class="boosters">
+            <h2>Boosters</h2>
+            <ul>
+                <li>
+                    <h3>Electric Car</h3>
+                    <p>Reduces travel CO2 emissions by 50%</p>
+                    <p>Cost: 100 points</p>
+                    <button class="booster-purchase" data-booster="electric-car">Purchase</button>
+                </li>
+                <li>
+                    <h3>Recycling Program</h3>
+                    <p>Reduces waste disposal CO2 emissions by 50%</p>
+                    <p>Cost: 50 points</p>
+                    <button class="booster-purchase" data-booster="recycling-program">Purchase</button>
+                </li>
+                <!-- More boosters can be added -->
+            </ul>
+        </section>
+    </div>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+   <script type="module" src="./firebase.js"></script>
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
